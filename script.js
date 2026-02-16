@@ -92,3 +92,19 @@ class ForestPortfolio {
 document.addEventListener('DOMContentLoaded', () => {
     new ForestPortfolio();
 });
+// Mobile menu toggle
+const menuBtn = document.querySelector('.menu-btn');
+const navList = document.querySelector('.nav-list');
+
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navList.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        navList.classList.remove('active');
+    });
+});
