@@ -15,7 +15,6 @@
     --shadow-xl: 0 25px 60px rgba(45, 90, 39, 0.3);
     
     --glow-emerald: 0 0 25px rgba(80, 200, 120, 0.6);
-    /* MUCH LIGHTER green card hover border */
     --card-hover-glow: linear-gradient(45deg, #A8E6CF, #D4F4DD);
 }
 
@@ -293,7 +292,7 @@ body {
     gap: 1rem;
 }
 
-/* MUCH LIGHTER green card hover border */
+/* Cards */
 .glow-card {
     background: linear-gradient(135deg, rgba(215, 204, 200, 0.4), rgba(232, 245, 232, 0.6));
     border-radius: 24px;
@@ -555,15 +554,28 @@ body {
     font-size: 1.2rem;
 }
 
-/* Projects */
+/* PROJECTS - FIXED TO 3 COLUMNS ON DESKTOP */
 .projects {
     padding: clamp(80px, 15vw, 120px) 0;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(320px, 45vw, 360px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: clamp(2rem, 5vw, 2.5rem);
+}
+
+/* FORCE 3 COLUMNS ON DESKTOP/LAPTOP */
+@media (min-width: 769px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .project-card {
@@ -732,7 +744,7 @@ body {
 }
 
 /* ===========================================
-   MOBILE NAVIGATION - CRITICAL FIX
+   RESPONSIVE BREAKPOINTS
    =========================================== */
 
 /* Mobile (0-768px) */
@@ -875,23 +887,7 @@ body {
     }
 }
 
-/* Landscape Mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        padding: 60px 1rem 2rem;
-        min-height: 100vh;
-    }
-    
-    .about, .skills, .experience, .projects, .contact {
-        padding: 50px 0;
-    }
-    
-    .section-title {
-        margin-bottom: 2rem;
-    }
-}
-
-/* Tablet and up */
+/* Tablet and up - HIDE MOBILE MENU */
 @media (min-width: 769px) {
     .menu-btn {
         display: none;
@@ -906,5 +902,26 @@ body {
         background: transparent;
         transform: none;
         gap: 2rem;
+    }
+    
+    /* 3 COLUMNS ON TABLET+ */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 60px 1rem 2rem;
+        min-height: 100vh;
+    }
+    
+    .about, .skills, .experience, .projects, .contact {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
     }
 }
