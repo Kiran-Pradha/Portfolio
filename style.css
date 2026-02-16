@@ -15,7 +15,6 @@
     --shadow-xl: 0 25px 60px rgba(45, 90, 39, 0.3);
     
     --glow-emerald: 0 0 25px rgba(80, 200, 120, 0.6);
-    /* MUCH LIGHTER green card hover border */
     --card-hover-glow: linear-gradient(45deg, #A8E6CF, #D4F4DD);
 }
 
@@ -64,7 +63,7 @@ body {
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -113,15 +112,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 140px 2rem 4rem;
+    padding: 140px 1rem 4rem;
 }
 
 .hero-content {
     max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 400px;
-    gap: 4rem;
+    gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
+    width: 100%;
 }
 
 .hero-left {
@@ -138,7 +138,7 @@ body {
     color: white;
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     font-weight: 600;
     letter-spacing: 2px;
     box-shadow: var(--shadow-lg), var(--glow-emerald);
@@ -147,7 +147,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(1.5rem, 5.5vw, 3.5rem);
+    font-size: clamp(1.8rem, 7vw, 3.5rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--forest-green), var(--leaf-green));
@@ -158,7 +158,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
     color: var(--leaf-green);
     font-weight: 700;
     margin-bottom: 2rem;
@@ -169,7 +169,7 @@ body {
 }
 
 .hero-text {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     max-width: 500px;
     margin-bottom: 3rem;
     opacity: 0.95;
@@ -186,11 +186,11 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    padding: 1.2rem 2.5rem;
+    padding: clamp(1rem, 3vw, 1.2rem) clamp(2rem, 4vw, 2.5rem);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -223,8 +223,8 @@ body {
 
 .profile-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: clamp(280px, 40vw, 400px);
+    height: clamp(280px, 40vw, 400px);
 }
 
 .profile-img {
@@ -257,14 +257,14 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 900;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: clamp(3rem, 8vw, 5rem);
     color: var(--forest-green);
     display: flex;
     align-items: center;
@@ -272,11 +272,11 @@ body {
     gap: 1rem;
 }
 
-/* MUCH LIGHTER green card hover border */
+/* Cards */
 .glow-card {
     background: linear-gradient(135deg, rgba(215, 204, 200, 0.4), rgba(232, 245, 232, 0.6));
     border-radius: 24px;
-    padding: 2rem;
+    padding: clamp(1.5rem, 4vw, 2rem);
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 3px solid rgba(74, 124, 89, 0.3);
@@ -306,14 +306,14 @@ body {
 
 /* About */
 .about {
-    padding: 120px 0;
+    padding: clamp(80px, 15vw, 120px) 0;
     background: linear-gradient(135deg, rgba(232, 245, 232, 0.4), rgba(192, 216, 192, 0.4));
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 30vw, 340px), 1fr));
+    gap: clamp(2rem, 5vw, 2.5rem);
 }
 
 .card-header {
@@ -325,15 +325,15 @@ body {
 }
 
 .card-icon {
-    width: 90px;
-    height: 90px;
+    width: clamp(70px, 12vw, 90px);
+    height: clamp(70px, 12vw, 90px);
     background: linear-gradient(135deg, var(--emerald), var(--lime-green));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.2rem;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     color: white;
     box-shadow: var(--glow-emerald);
     transition: all 0.4s ease;
@@ -348,12 +348,12 @@ body {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 /* Skills */
 .skills {
-    padding: 120px 0;
+    padding: clamp(80px, 15vw, 120px) 0;
     background: linear-gradient(135deg, rgba(232, 245, 232, 0.5), rgba(192, 216, 192, 0.5));
 }
 
@@ -365,8 +365,8 @@ body {
 
 .skill-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: clamp(2rem, 5vw, 2.5rem);
 }
 
 .skill-category {
@@ -381,7 +381,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
     margin-bottom: 2rem;
     color: var(--forest-green);
     font-weight: 700;
@@ -400,7 +400,7 @@ body {
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -432,9 +432,9 @@ body {
     box-shadow: 0 0 20px rgba(74, 124, 89, 0.6);
 }
 
-/* Experience - DOT REMOVED */
+/* Experience */
 .experience {
-    padding: 120px 0;
+    padding: clamp(80px, 15vw, 120px) 0;
 }
 
 .timeline {
@@ -465,7 +465,7 @@ body {
     color: var(--leaf-green);
     text-align: right;
     padding-right: 2rem;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -474,8 +474,8 @@ body {
 }
 
 .date-icon {
-    width: 40px;
-    height: 40px;
+    width: clamp(35px, 6vw, 40px);
+    height: clamp(35px, 6vw, 40px);
     background: linear-gradient(135deg, var(--emerald), var(--lime-green));
     border-radius: 50%;
     display: flex;
@@ -488,7 +488,7 @@ body {
 }
 
 .date-text {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.3;
 }
 
@@ -498,13 +498,12 @@ body {
     margin-left: 2rem;
 }
 
-/* DOT REMOVED - Full date visibility */
 .timeline-content::before {
     display: none;
 }
 
 .timeline-content h3 {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
     margin-bottom: 0.8rem;
     color: var(--forest-green);
 }
@@ -512,7 +511,7 @@ body {
 .timeline-content h4 {
     color: var(--leaf-green);
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
 }
 
 .timeline-content ul {
@@ -523,7 +522,7 @@ body {
     padding: 0.8rem 0;
     position: relative;
     padding-left: 2rem;
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 2.5vw, 1.05rem);
 }
 
 .timeline-content li::before {
@@ -537,19 +536,13 @@ body {
 
 /* Projects */
 .projects {
-    padding: 120px 0;
+    padding: clamp(80px, 15vw, 120px) 0;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-}
-
-@media (max-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    }
+    grid-template-columns: repeat(auto-fit, minmax(clamp(320px, 45vw, 360px), 1fr));
+    gap: clamp(2rem, 5vw, 2.5rem);
 }
 
 .project-card {
@@ -557,7 +550,7 @@ body {
 }
 
 .project-image {
-    height: 240px;
+    height: clamp(200px, 30vw, 240px);
     overflow: hidden;
     position: relative;
     border-radius: 16px;
@@ -580,7 +573,7 @@ body {
     justify-content: center;
     opacity: 0;
     transition: all 0.4s ease;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 2.5rem);
     color: white;
 }
 
@@ -593,7 +586,7 @@ body {
 }
 
 .project-info h3 {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
     margin-bottom: 1rem;
     color: var(--forest-green);
     font-weight: 700;
@@ -613,7 +606,7 @@ body {
     background: linear-gradient(135deg, var(--leaf-green), var(--emerald));
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 2.5vw, 0.9rem);
     font-weight: 600;
     color: white;
     display: flex;
@@ -627,8 +620,8 @@ body {
 }
 
 .project-links a {
-    width: 52px;
-    height: 52px;
+    width: clamp(45px, 8vw, 52px);
+    height: clamp(45px, 8vw, 52px);
     background: linear-gradient(135deg, var(--emerald), var(--lime-green));
     color: white;
     display: flex;
@@ -637,7 +630,7 @@ body {
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.4s ease;
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 4vw, 1.2rem);
 }
 
 .project-links a:hover {
@@ -647,26 +640,26 @@ body {
 
 /* Contact */
 .contact {
-    padding: 120px 0 80px;
+    padding: clamp(80px, 15vw, 120px) 0 clamp(40px, 10vw, 80px);
     background: linear-gradient(135deg, rgba(232, 245, 232, 0.6), rgba(192, 216, 192, 0.6));
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 45vw, 350px), 1fr));
+    gap: clamp(2rem, 5vw, 2.5rem);
 }
 
 .contact-icon {
-    width: 90px;
-    height: 90px;
+    width: clamp(70px, 12vw, 90px);
+    height: clamp(70px, 12vw, 90px);
     background: linear-gradient(135deg, var(--emerald), var(--lime-green));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     color: white;
     box-shadow: var(--glow-emerald);
     transition: all 0.4s ease;
@@ -677,7 +670,7 @@ body {
 }
 
 .contact-item h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
     margin-bottom: 1rem;
     color: var(--forest-green);
 }
@@ -685,14 +678,14 @@ body {
 .contact-item p {
     margin-bottom: 1.8rem;
     color: var(--dark-wood);
-    font-size: 1.15rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.15rem);
 }
 
 .contact-item a {
     color: var(--leaf-green);
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.15rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -704,27 +697,106 @@ body {
     color: var(--emerald);
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    .contact-grid,
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-    
-    .skill-row {
-        grid-template-columns: 1fr;
+/* Animations */
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
     }
 }
 
-@media (max-width: 768px) {
+/* ===========================================
+   RESPONSIVE BREAKPOINTS - COMPREHENSIVE
+   =========================================== */
+
+/* Large Desktop / PC (1200px+) */
+@media (min-width: 1201px) {
+    .hero-content {
+        grid-template-columns: 1fr 400px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Laptop (1024px - 1200px) */
+@media (max-width: 1200px) and (min-width: 769px), 
+       (min-width: 769px) and (max-height: 700px) {
+    .hero-content {
+        grid-template-columns: 1fr 350px;
+        gap: 3rem;
+    }
+    
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .hero-content {
+        grid-template-columns: 1fr 320px;
+    }
+    
+    .profile-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .skill-row {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+/* Tablet Landscape (481px - 1024px, height < 700px) */
+@media (max-height: 700px) and (min-width: 769px) {
+    .hero {
+        min-height: 100vh;
+        padding: 120px 1rem 2rem;
+    }
+    
+    .about-grid,
+    .projects-grid,
+    .contact-grid {
+        gap: 2rem;
+    }
+    
+    .glow-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile / Tablet Landscape (481px - 768px) */
+@media (max-width: 768px) and (min-height: 400px),
+       (max-width: 768px) and (orientation: landscape) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2.5rem;
     }
     
     .hero-right {
         order: -1;
+    }
+    
+    .profile-container {
+        margin: 0 auto;
+        width: 280px;
+        height: 280px;
     }
     
     .menu-btn {
@@ -742,22 +814,198 @@ body {
         transform: translateY(-100%);
         transition: transform 0.4s ease;
         box-shadow: var(--shadow-lg);
+        gap: 1.5rem;
     }
     
     .nav-list.open {
         transform: translateY(0);
     }
+    
+    .nav-list a {
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .skill-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row;
+        margin-bottom: 3rem;
+        align-items: flex-start;
+    }
+    
+    .timeline-date {
+        width: 120px;
+        padding-right: 1rem;
+        order: 1;
+    }
+    
+    .timeline-content {
+        margin-left: 1.5rem;
+        order: 2;
+    }
 }
 
-/* Animations */
-@keyframes glowPulse {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .hero {
+        padding: 120px 1rem 3rem;
+        text-align: center;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .profile-container {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+    
+    .hero-tag {
+        margin: 0 auto 2rem;
+        max-width: 280px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .about-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 25px;
+    }
+    
+    .timeline-date {
+        width: 100px;
+        padding-right: 1rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        margin-bottom: 2.5rem;
+    }
+    
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 1rem;
+        order: 1;
+    }
+    
+    .timeline-content {
+        margin-left: 0;
+        padding-left: 45px;
+        order: 2;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .glow-card {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.2s !important;
+/* Very Small Mobile (320px and below) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .profile-container {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .glow-card {
+        padding: 1.2rem 1rem;
+    }
+    
+    .project-links {
+        justify-content: center;
+    }
+}
+
+/* Landscape Mobile Overrides */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 100px 1rem 2rem;
+        min-height: 100vh;
+    }
+    
+    .about,
+    .skills,
+    .experience,
+    .projects,
+    .contact {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 2.5rem;
+    }
+    
+    .glow-card {
+        padding: 1.2rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 2rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    .project-image img {
+        image-rendering: -webkit-optimize-contrast;
     }
 }
