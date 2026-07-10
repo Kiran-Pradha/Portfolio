@@ -915,7 +915,16 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+.hero-text {
+    text-align: left; /* default / mobile */
+}
 
+@media (min-width: 769px) {
+    .hero-text {
+        text-align: justify;
+        text-align-last: left;
+    }
+}
 /* Landscape Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
