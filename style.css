@@ -957,3 +957,13 @@ body {
     padding: 0.7rem 1.6rem;
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
+
+.cert-icon-google {
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid rgba(74, 124, 89, 0.2);
+}
+
+.cert-icon-google svg {
+    display: block;
+}
