@@ -26,9 +26,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .hero-text {
-    text-align: justify;
-    text-align-last: left;
+    text-align: left; /* default / mobile */
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -915,9 +915,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-.hero-text {
-    text-align: left; /* default / mobile */
-}
+
 
 @media (min-width: 769px) {
     .hero-text {
