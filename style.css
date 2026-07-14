@@ -586,6 +586,9 @@ body {
 
 .project-card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-image {
@@ -594,6 +597,17 @@ body {
     position: relative;
     border-radius: 16px;
     margin-bottom: 2rem;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    color: rgba(62, 39, 35, 0.8);
 }
 
 .project-image img {
